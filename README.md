@@ -492,4 +492,3 @@ This project is licensed under the **MIT License**.
 ---
 
 ⭐ If you find RankMetric useful, consider giving the repository a star!
-```
