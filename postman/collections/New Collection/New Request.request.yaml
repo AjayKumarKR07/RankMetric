@@ -1,0 +1,14 @@
+$kind: http-request
+name: New Request
+url: http://localhost:5000/api/rank-history/github.com
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"keyword\": \"github\",\r
+
+    \  \"domain\": \"github.com\"\r
+
+    }"
+order: 1781846383713
