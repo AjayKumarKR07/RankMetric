@@ -1,27 +1,23 @@
-
 # 🚀 RankMetric
 
 ### AI-Powered SEO Intelligence & Rank Tracking Platform
 
-RankMetric is a **full-stack, end-to-end SEO intelligence platform** designed to help website owners, developers, marketers, and businesses analyze website performance, identify SEO issues, monitor search rankings, compare competitors, and receive AI-powered optimization recommendations.
+RankMetric is a full-stack, end-to-end SEO intelligence platform designed to help website owners, developers, marketers, and businesses analyze website performance, identify SEO issues, monitor search rankings, compare competitors, and receive AI-powered optimization recommendations.
 
-The platform provides a complete workflow from **user authentication and website analysis to AI recommendations, rank tracking, competitor analysis, PDF reporting, and Pro subscription payments**.
+It combines website SEO analysis, Google Lighthouse performance insights, AI-powered recommendations, keyword rank tracking, competitor analysis, historical reporting, and subscription management in one platform.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
 ### 🔐 Secure Authentication
-
 - Email OTP authentication
 - JWT-based authorization
 - Protected API endpoints
 - User-specific data access
 
 ### 🔍 Website SEO Analyzer
-
 Analyze websites across multiple SEO factors:
-
 - SEO Score
 - Meta Tags
 - Headings
@@ -34,51 +30,38 @@ Analyze websites across multiple SEO factors:
 - On-page SEO analysis
 
 ### 🤖 AI SEO Advisor
-
-Provides intelligent and actionable SEO recommendations based on the detected issues and website analysis results.
+Provides actionable SEO recommendations based on detected website issues and analysis results.
 
 ### ⚡ Performance Analysis
-
-Integrated performance analysis using:
-
-- Google Lighthouse
+Integrated Google Lighthouse analysis covering:
+- Performance
 - Core Web Vitals
-- Performance Metrics
 - Accessibility
 - Best Practices
+- Performance Metrics
 
 ### 📈 Rank Tracking
-
-Track keyword rankings and monitor SEO performance over time.
-
-- Keyword tracking
+- Keyword ranking monitoring
 - Ranking history
-- Ranking improvements
-- Ranking drops
+- Ranking improvements and drops
 - Historical performance visualization
 
 ### 🏆 Competitor Analysis
-
-Analyze competitor websites and compare SEO performance to identify opportunities for improvement.
+Analyze competitor websites and compare SEO performance to identify optimization opportunities.
 
 ### 📊 Historical Tracking
-
 Store and visualize historical ranking data to understand SEO growth and performance trends.
 
 ### 📄 PDF SEO Reports
-
-Generate downloadable SEO reports containing:
-
+Generate downloadable reports containing:
 - Website analysis
-- SEO score
+- SEO scores
 - Detected issues
 - Performance metrics
 - SEO recommendations
 
 ### 💳 Pro Subscription
-
-Integrated Razorpay payment system with:
-
+Integrated Razorpay payment system featuring:
 - Free scan limits
 - Monthly Pro subscription
 - Razorpay checkout
@@ -90,69 +73,63 @@ Integrated Razorpay payment system with:
 
 ## 🔄 End-to-End Workflow
 
-RankMetric implements a complete end-to-end SEO workflow:
+RankMetric connects the complete SEO analysis and optimization process:
 
 ```text
 User
- │
- ▼
+  |
+  v
 Email OTP Authentication
- │
- ▼
-JWT Authentication
- │
- ▼
+  |
+  v
+JWT Authorization
+  |
+  v
 RankMetric Dashboard
- │
- ▼
+  |
+  v
 Enter Website URL
- │
- ▼
-SEO Analysis
- │
- ├── Meta Tags
- ├── Headings
- ├── Content
- ├── Images
- ├── Links
- ├── Keywords
- └── Technical SEO
- │
- ▼
-Google Lighthouse
- │
- ├── Performance
- ├── Accessibility
- ├── Best Practices
- └── Core Web Vitals
- │
- ▼
-SEO Score & Issues
- │
- ▼
-AI SEO Advisor
- │
- ▼
-Actionable Recommendations
- │
- ├───────────────┬─────────────────┐
- ▼               ▼                 ▼
-Rank Tracking   Competitor       Historical
-                Analysis          Tracking
- │               │                 │
- └───────────────┴─────────────────┘
- │
- ▼
-PDF SEO Report
- │
- ▼
+  |
+  v
+Website SEO Analysis
+  |
+  +--> Meta Tags
+  +--> Headings
+  +--> Content
+  +--> Images
+  +--> Links
+  +--> Keywords
+  +--> Technical SEO
+  |
+  v
+Google Lighthouse Analysis
+  |
+  +--> Performance
+  +--> Accessibility
+  +--> Best Practices
+  +--> Core Web Vitals
+  |
+  v
+SEO Score and Issues
+  |
+  v
+AI SEO Recommendations
+  |
+  +--> Rank Tracking
+  +--> Competitor Analysis
+  +--> Historical Tracking
+  |
+  v
+SEO Insights and PDF Reports
+  |
+  v
 Pro Subscription
- │
- ▼
-Razorpay Payment
- │
- ▼
-Pro Features
+  |
+  v
+Razorpay Payment Verification
+  |
+  v
+Pro Feature Access
 ```
 
 ---
@@ -160,57 +137,58 @@ Pro Features
 ## 🏗️ System Architecture
 
 ```text
-                         ┌─────────────────────┐
-                         │        User         │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │   React Frontend    │
-                         │ TypeScript + Vite   │
-                         │    Tailwind CSS     │
-                         └──────────┬──────────┘
-                                    │
-                              REST API / JWT
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │   Node.js + Express │
-                         │       Backend       │
-                         └──────────┬──────────┘
-                                    │
-          ┌─────────────────────────┼─────────────────────────┐
-          │                         │                         │
-          ▼                         ▼                         ▼
-   ┌────────────┐           ┌──────────────┐          ┌─────────────┐
-   │  MongoDB   │           │  SEO Engine  │          │ AI Advisor  │
-   └────────────┘           └───────┬──────┘          └─────────────┘
-                                    │
-                         ┌──────────┴──────────┐
-                         │                     │
-                         ▼                     ▼
-                  ┌─────────────┐       ┌──────────────┐
-                  │  Lighthouse │       │ Rank Tracker │
-                  └─────────────┘       └──────────────┘
-                         │                     │
-                         └──────────┬──────────┘
-                                    ▼
-                           ┌─────────────────┐
-                           │  SEO Insights   │
-                           └─────────────────┘
-                                    │
-                    ┌───────────────┼────────────────┐
-                    ▼               ▼                ▼
-              PDF Reports     Competitor       AI Recommendations
-                              Analysis
+                  +---------------------+
+                  |        User         |
+                  +----------+----------+
+                             |
+                             v
+                  +---------------------+
+                  |   React Frontend    |
+                  | TypeScript + Vite   |
+                  |    Tailwind CSS     |
+                  +----------+----------+
+                             |
+                       REST API / JWT
+                             |
+                             v
+                  +---------------------+
+                  |   Node.js + Express |
+                  |       Backend       |
+                  +----------+----------+
+                             |
+          +------------------+------------------+
+          |                  |                  |
+          v                  v                  v
+     +----------+      +-------------+     +------------+
+     | MongoDB  |      |  SEO Engine |     | AI Advisor |
+     +----------+      +------+------+     +------------+
+                             |
+                     +-------+-------+
+                     |               |
+                     v               v
+                +----------+    +-------------+
+                |Lighthouse|    | Rank Tracker|
+                +----------+    +-------------+
+                     |               |
+                     +-------+-------+
+                             |
+                             v
+                    +----------------+
+                    |  SEO Insights  |
+                    +----------------+
+                             |
+             +---------------+---------------+
+             |               |               |
+             v               v               v
+        PDF Reports     Competitor      AI Recommendations
+                       Analysis
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 ### Frontend
-
 - React
 - TypeScript
 - Vite
@@ -220,7 +198,6 @@ Pro Features
 - Recharts
 
 ### Backend
-
 - Node.js
 - Express.js
 - REST APIs
@@ -228,27 +205,22 @@ Pro Features
 - Nodemailer
 
 ### Database
-
 - MongoDB
 - Mongoose
 
-### AI & SEO
-
+### AI and SEO
 - AI-powered SEO recommendations
 - Google Lighthouse
 - Core Web Vitals
 - SEO analysis engine
 
-### Payments
-
+### Payment Integration
 - Razorpay
 
-### Reporting
-
+### Report Generation
 - PDFKit
 
-### Development
-
+### Development Tools
 - Git
 - GitHub
 - Postman
@@ -301,7 +273,7 @@ git clone https://github.com/AjayKumarKR07/RankMetric.git
 cd RankMetric
 ```
 
-### 2. Install Dependencies
+### 2. Install Root Dependencies
 
 ```bash
 npm install
@@ -316,13 +288,9 @@ npm install
 
 ### 4. Configure Environment Variables
 
-Create:
+Create a `.env` file inside the `backend` directory.
 
-```text
-backend/.env
-```
-
-Example:
+Example configuration:
 
 ```env
 PORT=5000
@@ -338,18 +306,19 @@ RAZORPAY_KEY_SECRET=your_razorpay_key_secret
 GROQ_API_KEY=your_groq_api_key
 ```
 
-> ⚠️ Never commit your `.env` file or expose API keys and secrets publicly.
+**Security:** Never commit your `.env` file or expose API keys, passwords, or private credentials publicly.
 
-### 5. Start Backend
+### 5. Start the Backend
+
+From the `backend` directory:
 
 ```bash
-cd backend
 node server.js
 ```
 
-### 6. Start Frontend
+### 6. Start the Frontend
 
-Open another terminal:
+Open a separate terminal from the project root:
 
 ```bash
 cd frontend
@@ -357,7 +326,7 @@ npm install
 npm run dev
 ```
 
-The frontend will then connect to the backend API.
+Open the local URL displayed by Vite in your browser.
 
 ---
 
@@ -365,20 +334,20 @@ The frontend will then connect to the backend API.
 
 ```text
 Enter Email
-     │
-     ▼
+    |
+    v
 Send OTP
-     │
-     ▼
+    |
+    v
 Verify OTP
-     │
-     ▼
+    |
+    v
 Generate JWT
-     │
-     ▼
+    |
+    v
 Authenticated User
-     │
-     ▼
+    |
+    v
 Access Protected APIs
 ```
 
@@ -388,24 +357,24 @@ Access Protected APIs
 
 ```text
 Free User
-    │
-    ▼
+    |
+    v
 Free Scan Limit
-    │
-    ▼
+    |
+    v
 Upgrade to Pro
-    │
-    ▼
+    |
+    v
 Razorpay Checkout
-    │
-    ▼
+    |
+    v
 Payment Verification
-    │
-    ▼
+    |
+    v
 Pro Account
-    │
-    ▼
-Advanced Features
+    |
+    v
+Access Pro Features
 ```
 
 ---
@@ -414,55 +383,51 @@ Advanced Features
 
 ### Authentication
 
-```text
-POST /api/auth/send-otp
-POST /api/auth/verify-otp
-```
+| Method | Endpoint |
+|---|---|
+| POST | `/api/auth/send-otp` |
+| POST | `/api/auth/verify-otp` |
 
 ### SEO Analysis
 
-```text
-POST /api/analyze
-```
+| Method | Endpoint |
+|---|---|
+| POST | `/api/analyze` |
 
 ### Competitor Analysis
 
-```text
-POST /api/competitors
-```
+| Method | Endpoint |
+|---|---|
+| POST | `/api/competitors` |
 
 ### Historical Ranking
 
-```text
-GET /api/rank-history/:keyword
-```
+| Method | Endpoint |
+|---|---|
+| GET | `/api/rank-history/:keyword` |
 
 ### Payments
 
-```text
-POST /api/payment/create-order
-POST /api/payment/verify
-```
+| Method | Endpoint |
+|---|---|
+| POST | `/api/payment/create-order` |
+| POST | `/api/payment/verify` |
 
 ---
 
 ## 🔒 Security
 
-RankMetric implements multiple security mechanisms:
-
-- JWT authentication
+RankMetric incorporates:
+- JWT authentication and authorization
 - Protected API routes
 - Email OTP verification
 - Environment-based secret management
 - User-specific data access
 - Razorpay payment verification
-- Secure API authorization
 
 ---
 
 ## 📈 Future Enhancements
-
-Planned improvements include:
 
 - Google Search Console integration
 - Google Analytics integration
@@ -480,14 +445,17 @@ Planned improvements include:
 
 **Ajay Kumar K R**
 
-GitHub:  
-https://github.com/AjayKumarKR07
+Information Science & Engineering
+
+GitHub: [AjayKumarKR07](https://github.com/AjayKumarKR07)
+
+**Repository:** [RankMetric](https://github.com/AjayKumarKR07/RankMetric)
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License.
 
 ---
 
